@@ -1,0 +1,36 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.4.33403.182
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Doc", "Doc", "{5592DE0D-A2AB-4C2F-BFCB-D2FFA3808BC7}"
+	ProjectSection(SolutionItems) = preProject
+		..\Core Prj\WebShop\001_InitialProject.txt = ..\Core Prj\WebShop\001_InitialProject.txt
+		002_Add_Git.txt = 002_Add_Git.txt
+	EndProjectSection
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Src", "Src", "{16B2BB83-D799-443A-84B3-788815A0BD9B}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "EndPoint.Site", "EndPoint.Site\EndPoint.Site.csproj", "{AC16E189-8C50-4D23-B9CA-117033DB5BC5}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{AC16E189-8C50-4D23-B9CA-117033DB5BC5}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{AC16E189-8C50-4D23-B9CA-117033DB5BC5}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{AC16E189-8C50-4D23-B9CA-117033DB5BC5}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{AC16E189-8C50-4D23-B9CA-117033DB5BC5}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{AC16E189-8C50-4D23-B9CA-117033DB5BC5} = {16B2BB83-D799-443A-84B3-788815A0BD9B}
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {6D84A504-8089-4008-83E6-CA706A758D16}
+	EndGlobalSection
+EndGlobal
