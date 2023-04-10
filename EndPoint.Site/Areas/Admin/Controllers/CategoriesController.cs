@@ -6,6 +6,7 @@ using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.Rendering;
 using Microsoft.EntityFrameworkCore;
 using EndPoint.Site.Models;
+using System.ComponentModel;
 
 namespace EndPoint.Site.Areas.Admin.Controllers
 {
@@ -54,12 +55,15 @@ namespace EndPoint.Site.Areas.Admin.Controllers
         // POST: Admin/Categories/Create
         // To protect from overposting attacks, enable the specific properties you want to bind to.
         // For more details, see http://go.microsoft.com/fwlink/?LinkId=317598.
+        
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public async Task<IActionResult> Create([Bind("CategoryId,Title,Visible,PhotoAddress")] Category category)
+        public async Task<IActionResult> Create([Bind("CategoryId,Title")] Category category)
         {
             if (ModelState.IsValid)
             {
+                category.Visible = 1;
+                category.PhotoAddress = "/admintemplate/app-assets/img/default/defaultcategorybanner.jpg";
                 _context.Add(category);
                 await _context.SaveChangesAsync();
                 return RedirectToAction(nameof(Index));
@@ -81,6 +85,23 @@ namespace EndPoint.Site.Areas.Admin.Controllers
                 return NotFound();
             }
             return View(category);
+        }
+
+        public IActionResult EditVisibility(int? id)
+        {
+            if (id == null || _context.Categories == null)
+            {
+                return RedirectToAction(nameof(Index));
+            }
+            else
+            {
+                Category category = _context.Categories.Find(id);
+
+                category.Visible = category.Visible * -1;
+
+                _context.SaveChanges();
+                return RedirectToAction(nameof(Index));
+            }
         }
 
         // POST: Admin/Categories/Edit/5
@@ -117,6 +138,7 @@ namespace EndPoint.Site.Areas.Admin.Controllers
             }
             return View(category);
         }
+
 
         // GET: Admin/Categories/Delete/5
         public async Task<IActionResult> Delete(int? id)

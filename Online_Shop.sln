@@ -7,6 +7,7 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Doc", "Doc", "{5592DE0D-A2A
 	ProjectSection(SolutionItems) = preProject
 		..\Core Prj\WebShop\001_InitialProject.txt = ..\Core Prj\WebShop\001_InitialProject.txt
 		002_Add_Git.txt = 002_Add_Git.txt
+		003_Category.txt = 003_Category.txt
 	EndProjectSection
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Src", "Src", "{16B2BB83-D799-443A-84B3-788815A0BD9B}"
